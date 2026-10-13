@@ -4,6 +4,21 @@ import { resolveTargetUrl } from "./router"
 
 const app = new Hono<{ Bindings: Bindings }>()
 
+// Root information endpoint
+app.get("/", (c) => {
+  return c.json({
+    name: "Akordium Webhook Router",
+    description: "Centralized webhook router for Akordium Lab SaaS and services",
+    status: "active",
+    endpoints: {
+      health: "GET /health",
+      xendit: "POST /xendit",
+      midtrans: "POST /midtrans",
+    },
+    documentation: "https://github.com/akordium-id/akordium-webhook-router",
+  })
+})
+
 // Health check endpoint
 app.get("/health", (c) => {
   return c.json({
