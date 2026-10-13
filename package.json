@@ -1,0 +1,30 @@
+{
+  "name": "akordium-webhook-router",
+  "version": "1.0.0",
+  "description": "Webhook router untuk pemisahan produk dan layanan akordium melalui payment gateway Xendit / Midtrans",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "cloudflare-workers",
+    "hono",
+    "webhook",
+    "xendit",
+    "midtrans",
+    "saas"
+  ],
+  "author": "Akordium Lab",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "hono": "^4.7.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250224.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0",
+    "wrangler": "^3.111.0"
+  }
+}

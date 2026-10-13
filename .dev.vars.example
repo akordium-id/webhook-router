@@ -1,0 +1,3 @@
+XENDIT_WEBHOOK_TOKEN="xnd_webhook_verification_token_here"
+# Opsional jika target URL ingin di-override via env vars:
+# VISTEO_WEBHOOK_URL="https://visteo-app.akordium.id/api/payment/webhook"
