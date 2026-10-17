@@ -1,3 +1,10 @@
 XENDIT_WEBHOOK_TOKEN="xnd_webhook_verification_token_here"
-# Opsional jika target URL ingin di-override via env vars:
-# VISTEO_WEBHOOK_URL="https://visteo-app.akordium.id/api/payment/webhook"
+
+# 1. Dynamic Environment Variables per Product:
+# Pola: [PREFIX]_WEBHOOK_URL (otomatis cocok dengan order_id / external_id seperti "dompiku-123" atau "dompiku_123")
+DOMPIKU_WEBHOOK_URL="https://dompiku.akordium.id/api/webhooks/xendit"
+VISTEO_WEBHOOK_URL="https://visteo-app.akordium.id/api/payment/webhook"
+CRM_WEBHOOK_URL="https://crm.akordium.id/api/payment/webhook"
+
+# 2. Alternatif JSON Routing Table (Opsional):
+# ROUTES_CONFIG='{"dompiku":"https://dompiku.akordium.id/api/webhooks/xendit","crm":"https://crm.akordium.id/api/payment/webhook"}'
